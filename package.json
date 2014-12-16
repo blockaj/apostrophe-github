@@ -1,0 +1,25 @@
+{
+  "name": "apostrophe-github",
+  "version": "0.5.0",
+  "description": "Adds a list of github repos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blockaj/apostrophe-github.git"
+  },
+  "author": {
+    "name": "Aaron Block"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "2.4.x",
+    "request": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/blockaj/apostrophe-github/issues"
+  },
+  "homepage": "https://github.com/blockaj/apostrophe-github"
+}

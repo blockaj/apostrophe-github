@@ -1,0 +1,25 @@
+{% extends "baseWidgetEditor.html" %}
+
+{% block modalClass %}
+  {{ super() }} apos-github-editor
+{% endblock%}
+
+{% block modalLabel %}
+  {{ __('Select github Feed') }}
+{% endblock %}
+
+{% block modalInstructions %}
+  <p>{{ __('Add a username and then filter tweets within that account by hashtag, if desired.') }}</p>
+{% endblock %}
+
+{% block formBody %}
+<fieldset class="apos-fieldset apos-fieldset-text">
+	<label>Github Username</label>
+  <input class="apos-github-account" />
+</fieldset>
+ <fieldset class="apos-fieldset apos-fieldset-text">
+   <label>Limit Number of Repos</label>
+   <input type="text" name="limit" class="apos-input-narrow" data-apos-github-limit />
+  </fieldset>
+
+{% endblock %}

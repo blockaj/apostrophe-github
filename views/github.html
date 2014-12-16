@@ -1,0 +1,17 @@
+<h4 class="apos-githubs-header"><a href="http://github.com/{{ item.account | e }}">{{ item.account | e }}</a></h4>
+
+<ul class="apos-github">
+  {# githubs are magicked here by the widget player in content.js, which #}
+  {# clones the template github below as needed, removing the apos-template class #}
+  <li class="apos-github apos-template">
+  </li>
+  {# In the main content editor we shouldn't modify the DOM dynamically with JS players, #}
+  {# so just show some placeholder githubs. #}
+  {% if options.editView %}
+    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
+    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
+    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
+    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
+    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
+  {% endif %}
+</ul>
