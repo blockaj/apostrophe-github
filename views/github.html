@@ -1,17 +1,23 @@
 <h4 class="apos-githubs-header"><a href="http://github.com/{{ item.account | e }}">{{ item.account | e }}</a></h4>
 
-<ul class="apos-github">
+<ul class="apos-githubs">
   {# githubs are magicked here by the widget player in content.js, which #}
   {# clones the template github below as needed, removing the apos-template class #}
   <li class="apos-github apos-template">
+    <ul data-images></ul>
+    <span class="apos-github-profile">
+      <span class="apos-github-profile-image"></span>
+      <span class="apos-github-date"></span>
+    </span>
+    <span class="apos-github-text"></span>
   </li>
   {# In the main content editor we shouldn't modify the DOM dynamically with JS players, #}
   {# so just show some placeholder githubs. #}
   {% if options.editView %}
-    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
-    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
-    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
-    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
-    <li class="apos-github">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</li>
+    <li class="apos-github"><span class="apos-github-date">1/1</span><span class="apos-github-text">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</span></li>
+    <li class="apos-github"><span class="apos-github-date">1/1</span><span class="apos-github-text">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</span></li>
+    <li class="apos-github"><span class="apos-github-date">1/1</span><span class="apos-github-text">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</span></li>
+    <li class="apos-github"><span class="apos-github-date">1/1</span><span class="apos-github-text">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</span></li>
+    <li class="apos-github"><span class="apos-github-date">1/1</span><span class="apos-github-text">{{ __('This is what a typical github will look like as it approaches 140 characters of text, which is the very longest allowable length for a github.') }}</span></li>
   {% endif %}
 </ul>
